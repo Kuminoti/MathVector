@@ -1,4 +1,4 @@
-#include"../include/mathVector.hpp"
+#include"mathVector.hpp"
 
 using namespace Dvec;
 // Helper functions:
