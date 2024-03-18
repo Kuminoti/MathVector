@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.0)
+
+project(Mathvector)
+
+# Setze die Quelldateien für die Bibliothek
+set(SOURCE_FILES src/mathvector.cpp)
+
+# Füge das 'include'-Verzeichnis hinzu
+include_directories(include)
+
+# Erstelle die statische Bibliothek
+add_library(mathvector STATIC ${SOURCE_FILES})
+
+# Setze die Ausgabedateien in ein Unterverzeichnis
+set_target_properties(mathvector PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
+)
+
